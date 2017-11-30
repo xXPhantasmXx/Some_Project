@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="center.css"/>
+<map name="maskmap">
+  <area shape="rect" coords="0,0,66,121" alt="hollow mask" href="E:\My Pictures\Icons\Hallow Mask Icon 1.1.jpg"target="_blank">
+  <area shape="rect" coords="67,0,132,121" alt="hollow Mask" href="https://www.google.bg/search?q=hollow+ichigo+full+form&source=
+  lnms&tbm=isch&sa=X&ved=0ahUKEwiT7d3OicDUAhUBBcAKHVN1AiAQ_AUIBigB&biw=1366&bih=648#imgrc=rF74CCN5olXUeM:"target="_blank">
+</map>
+<script>
+$(document).ready(function(){
+  $("#wtf").click(function(){
+    $("#click").slideToggle("slow");
+  });
+$("#clock").click(function(){
+    $("#time").fadeToggle("slow");
+  });
+});
+</script>
+<style>
+* {
+    box-sizing: border-box;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    position:fixed;
+    width:98.6%;
+    border-radius:10px;
+}
+
+li {
+    float: left;
+    border-right:1px solid white;
+    pading-right:10%;
+}
+
+li a.active {
+    background-color: rgb(60,60,60);
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: rgb(255,120,0);
+    color: white;
+    text-decoration: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgb(255,120,0);
+    color: white;
+    text-decoration: none;
+}
+
+.button{
+  position:relative;
+  background-color:black;
+  color:white;
+  border:1px solid rgb(255,120,0);
+  border-radius:5px;
+  padding:15px 32px;
+  display:inline-block;
+  text-decoration:none;
+  font-size: 16px;
+  margin:4px 2px;
+  cursor:pointer;
+  -webkit-transform-duration:0.5s;
+  transform-duration:0.5s;
+  box-shadow:0px 9px #666;
+}
+
+.button:hover{
+  background-color:rgb(255,120,0);
+  color:white;
+}
+.button:active {
+  background-color: rgb(255,120,0);
+  box-shadow: 0px 5px #333;
+  transform: translateY(4px);
+}
+</style>
+
+</head>
+<body>
+
+<body background="E:\My Pictures\Tokyo Ghoul - Masked Kaneki.jpg" bgcolor="black" bgproperties="fixed"
+
+<br/>
+
+<ul>
+  <li><a href="Test Page 1.html">Page 1</a></li>
+  <li><a class="active" href="Test Page 2.html">Page 2</a></li>
+  <li><a href="Test Page 3.html">Page 3</a></li>
+  <li><a href="Test Page 3 + Dropdown.html">Page 3+</a></li>
+  <li><a href="Test Page 4.html">Page 4</a></li>
+  <li><a href="Test Page 5.html">Page 5</a></li>
+  <li><a href="Test Page 5 + JavaScript.html">Page 5+</a></li>
+</ul>
+
+<br/>
+
+<h1 style="text-align:center;color:rgb(150,0,0);font-size:300%;text-shadow:2px 2px 5px black;">Welcome
+</h1>
+
+<div id="image">
+  <img src="E:\My Pictures\Icons\Hallow Mask Icon.png" alt="Mask" usemap="#maskmap"
+  style=";width:132px;height:121px;"/>
+</div>
+
+<h1 style="text-align:center;text-shadow:2px 2px 5px black;color:rgb(150,0,0);">My <span style="color:red">Important</span> Heading</h1>
+
+<p style="text-align:center;color:red;font-size:150%;">
+<a href="E:\HTML\Test Page 1.html">Click to return
+</a>
+</p>
+
+<div id="frame">
+  <iframe src="Test%20Page%203.html" height="400" width="900" style="border:2px solid black;padding:20px;
+    background-color:rgb(255,255,255)">
+  </iframe>
+</div>
+  <!--can also remove frame withstyle="border:none;"-->
+<br/>
+
+<section style="text-align:center;">
+
+  <button class="button" type="button" id="clock" onclick="document.getElementById('time').innerHTML = Date()">
+  Click me to display Date and Time.</button>
+
+<br/>
+  <p id="time" style="background-color:black; color:red; margin-left:50px; margin-right:50px;">
+  </p>
+<br/>
+  <button class="button" type="button" id="wtf" onclick="Change()">Click Me!</button>
+  <p id="click">Help I'm trapped inside my computer!!! 
+  </p>
+<br/>
+<p id="dclock"></p>
+
+<script>
+  function Change() { 
+    document.getElementById("click").innerHTML = "HELP SOS SOMEBODY HELP!!!";
+    document.getElementById("click").style.fontSize = "25px"; 
+    document.getElementById("click").style.color = "red";
+    document.getElementById("click").style.backgroundColor = "black";
+  }
+
+var myVar = setInterval(myTimer, 1000);
+
+function myTimer() {
+    var d = new Date();
+    document.getElementById("dclock").innerHTML = d.toLocaleTimeString();
+    document.getElementById("dclock").style.color = "white";
+}
+</script>
+
+</section>
+</body>
+</html>

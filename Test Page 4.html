@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8"/>
+<style>
+body {
+    margin: 0;
+    font-family:"Times New Roman", Times, serif;
+}
+                                               /* Buttons Menu */
+.btn-group {
+    margin-top:8px;
+    margin-left:8px;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    position:fixed;
+    width:99%;
+    border-radius:10px;
+    height:50px;
+    
+}
+.btn-group button {
+    display:inline-block;
+    font-family:"Times New Roman", Times, serif;
+    font-size:16px;
+    background-color: rgb(0,0,0);
+    border:none;
+    border-right:1px solid white;
+    float: left;
+    padding:16px 6px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    overflow:hidden;
+}
+button a {
+    color:rgb(255,255,255);
+    padding:15px 10px;
+    text-decoration: none;
+}
+
+button a.active {
+    background-color: rgb(60,60,60);                     /* <--Doesn't Work Properly */
+    color: white;
+}
+
+button a:hover:not(.active) {
+    background-color: rgb(255,120,0);
+    color: white;
+    text-decoration: none;
+}
+
+.btn-group button:hover {
+    background-color: rgb(255,120,0);
+}
+
+                                            /* Menu With Buttons End */
+
+ul {
+    list-style-type: none;
+    margin-top: 60px;
+    padding: 0;
+    background-color: rgb(0,0,0);
+    position: fixed;
+    height: 100%;
+    width:18%;
+    overflow: auto;
+    border:1px solid white;
+    border-radius:10px;
+}
+
+li a {
+    display: block;
+    color:rgb(255,255,255);
+    padding: 8px 16px;
+    text-decoration: none;
+    border-bottom:1px solid white;
+    border-top:1px solid white;
+    border-radius:10px;
+}
+
+li a.active {
+    background-color: rgb(60,60,60);
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color:rgb(255,120,0);
+    color: white;
+}
+
+li a:hover {
+    background-color: rgb(255,120,0);
+    color: white;
+    text-decoration: none;
+}
+
+#Lgradient{
+  z-index: -2;
+  display: inline-block;
+  position: relative;
+  top: 45px;
+  float: right;
+  width: 81%;
+  height: 200px;
+  background: black;
+    background: -webkit-linear-gradient(left,white, red, orange, yellow, green, blue, indigo, violet,black);
+ /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left,white, red, orange, yellow, green, blue, indigo, violet,black);
+ /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left,white, red, orange, yellow, green, blue, indigo, violet,black);
+ /* For Fx 3.6 to 15 */
+    background: linear-gradient(to right,white, red, orange, yellow, green, blue, indigo, violet,black);
+ /* Standard syntax (must be last) */
+}
+
+/*
+There is also a "radial-gradient" who makes the colors change from the center of the space outward
+for instance:
+ [background: radial-gradient(red, yellow, green);]- elipse 
+&
+ [background: radial-gradient(circle, red, yellow, green)]-cirlce
+*/
+
+.awesome{
+  position: absolute;
+  top: 80px;
+  right: 480px;
+  width: 200px;
+  height: 100px;
+  text-shadow:0 0 3px black, 0 0 6px blue;
+}
+
+#animation{
+  width:100px;
+  height:100px;
+  margin-left:25%;
+  background-color:red;
+  border-radius:20px;
+  position:relative;
+  -webkit-animation-name: kado2;
+  -webkit-animation-duration: 6s; 
+  -webkit-animation-iteration-count: infinite;
+  animation-name: kado2;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes kado2{
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+@keyframes kado2{
+  0%  {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+#kado{
+  width: 200px;
+  height: 200px;
+  margin-left:30%;
+  background:rgb(255,120,0);
+  -webkit-transition: width 2s, height 2s,-webkit-transform 2s;
+  transition: width 2s, height 2s,transform 2s;
+  -webkit-transition-timing-function:ease-out;
+  transition-timing-function:ease-out;
+  -webkit-transition-delay: 0.2s;
+  transition-delay:0.2s;
+  border-radius:50px;
+}
+
+#kado:hover{
+  width:300px;
+  height:300px;
+  transform:rotate(180deg);
+  -webkit-transform:rotate(180deg); 
+}
+
+
+#animation{
+  width:100px;
+  height:100px;
+  margin-left:19%;
+  border-radius:100px;
+  background-color:black;
+  position:relative;
+  -webkit-animation-name: kado2;
+  -webkit-animation-duration: 6s; 
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction:alternate;
+  animation-name: kado2;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes kado2{
+  0%   {background-color:black; left:0px; top:0px;}
+  25%  {background-color:red; left:350px; top:0px;}
+  50%  {background-color:blue; left:350px; top:350px;}
+  75%  {background-color:green; left:0px; top:350px;}
+  100% {background-color:white; left:0px; top:0px;}
+}
+
+@keyframes kado2{
+  0%  {background-color:black; left:0px; top:0px;}
+  25%  {background-color:red; left:350px; top:0px;}
+  50%  {background-color:blue; left:350px; top:350px;}
+  75%  {background-color:green; left:0px; top:350px;}
+  100% {background-color:white; left:0px; top:0px;}
+}
+
+</style>
+</head>
+<body>
+
+<div class="btn-group">
+<button><a href="Test Page 1.html">Page 1</a></button>
+<button><a href="Test Page 2.html">Page 2</a></button>
+<button><a href="Test Page 3.html">Page 3</a></button>
+<button><a href="Test Page 3 + Dropdown.html">Page 3+</a></button>
+<button><a class="active" href="Test Page 4.html" style="width:70px;height:60px;top:0;">Page 4</a></button>
+<button><a href="Test Page 5.html">Page 5</a></button>
+<button><a href="Test Page 5 + JavaScript.html">Page 5+</a></button>
+</div>
+
+<ul>
+  <li><a href="Test Page 1.html">Page 1</a></li>
+  <li><a href="Test Page 2.html">Page 2</a></li>
+  <li><a href="Test Page 3.html">Page 3</a></li>
+  <li><a href="Test Page 3 + Dropdown.html">Page 3+</a></li>
+  <li><a class="active" href="Test Page 4.html">Page 4</a></li>
+  <li><a href="Test Page 5.html">Page 5</a></li>
+  <li><a href="Test Page 5 + JavaScript.html">Page 5+</a></li>
+  <li><a href="#1">1</a></li>
+  <li><a href="#2">2</a></li>
+  <li><a href="#3">3</a></li>
+  <li><a href="#4">4</a></li>
+  <li><a href="#5">5</a></li>
+  <li><a href="#6">6</a></li>
+  <li><a href="#7">7</a></li>
+  <li><a href="#8">8</a></li>
+  <li><a href="#9">9</a></li>
+  <li><a href="#10">10</a></li>
+  <li><a href="#11">11</a></li>
+  <li><a href="#12">12</a></li>
+  <li><a href="#13">13</a></li>
+  <li><a href="#14">14</a></li>
+  <li><a href="#15">15</a></li>
+</ul>
+
+<br/>
+
+
+<div id="Lgradient" style="text-align:center; margin:auto; color:white; font-size:40px; font-weight:bold;">
+<div class="awesome"><i>Awesome</i>
+</div>
+</div>
+
+<br/>
+
+<div style="margin-left:20%; margin-top:20%; padding:1px 1px; height:1000px;">
+  <h2>Fixed Full-height Side Nav</h2>
+  <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
+  <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
+  <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>
+  <p>asd</p>
+  <p>asdf</p>
+  <p>asdfg</p>
+  <p>asdfgh</p>
+  <p>asfghj</p>
+  <p>asdfghjk</p>
+  <p>Some text..</p>
+
+<br/>
+
+<div id="animation"></div>
+
+<br/>
+
+<div id="kado"></div>
+
+</body>
+</html>

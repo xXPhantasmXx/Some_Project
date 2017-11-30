@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8"/>
+<style>
+                                                            /*Menu*/
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    position:fixed;
+    width:98.6%;
+    border-radius:10px;
+}
+
+li {
+    float: left;
+    border-right:1px solid white;
+
+}
+
+.list a:active {
+    background-color: rgb(60,60,60);
+    color: white;
+}
+
+.list a:hover:not(.active) {
+    background-color: rgb(255,120,0);
+    color: white;
+}
+
+.list a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.list a:hover {
+    background-color: rgb(255,120,0);
+    color: white;
+}                                                   
+                                                    /* Menu End */
+*{
+  box-sizing: border-box;
+}
+                                                /* The Gallery Part */   
+
+div.gallery {
+    display: table;
+    position: relative;
+    margin-top: auto;
+    margin-bottom: 20px;
+    margin-left: 90px;
+    border: 1px solid black;
+    float: left;
+    width: 220px;
+    box-shadow:4px 4px 5px gray;
+    border-radius:8px;
+    overflow:hidden;
+
+}
+
+div.gallery:hover {
+    border: 1px solid blue;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+                                        /* The Java Script Connected Part */                                                    
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+#myImg1:hover {opacity: 0.7;}
+#myImg2:hover {opacity: 0.7;}
+#myImg3:hover {opacity: 0.7;}
+#myImg4:hover {opacity: 0.7;}
+#myImg5:hover {opacity: 0.7;}
+#myImg6:hover {opacity: 0.7;}
+#myImg7:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes zoom {
+    from {transform: scale(0.1)} 
+    to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 20px;
+    font-weight: ;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+                                                   /* Java Script Connected Part End */
+
+                                                    /* For The E-mail List */
+
+.E-mail {
+  list-style-type:none;
+  display: inline-block;
+  margin-left: 42%;
+}
+.Mail-list {
+  text-decoration:none;
+  margin:10px;
+}
+.Mail-list a:active {
+  text-decoration:none;
+  color:red;
+}
+.Mail-list a {
+  color:black;
+}
+                                                     /* List End */
+</style>
+</head>
+<body>
+
+<ul class = "menu">
+  <li class = "list"><a href="Test Page 1.html">Page 1</a></li>
+  <li class = "list"><a href="Test Page 2.html">Page 2</a></li>
+  <li class = "list"><a href="Test Page 3.html">Page 3</a></li>
+  <li class = "list"><a href="Test Page 3 + Dropdown.html">Page 3+</a></li>
+  <li class = "list"><a href="Test Page 4.html">Page 4</a></li>
+  <li class = "list"><a href="Test Page 5.html">Page 5</a></li>
+  <li class = "list"><a class="active" href="Test Page 5 + JavaScript.html">Page 5+</a></li>
+</ul>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>                         
+                                              <!-- IMAGE GALLERY -->
+
+
+<div class="gallery">
+    <img id="myImg" src="E:\My Pictures\Metal Gear Rising - Jack The Ripper.jpg" alt="MGR-JTR" >
+  <div class="desc">Metal Gear Rising</div>
+</div>
+
+<div class="gallery">
+    <img id="myImg1" src="E:\My Pictures\Metal Gear Rising - Raiden.jpg" alt="MGR-R" >
+  <div class="desc">Metal Gear Rising</div>
+</div>
+
+<div class="gallery">
+    <img id="myImg2" src="E:\My Pictures\Castlevania Alucard.jpg" alt="CA" >
+  <div class="desc">Castlevania - Alucard</div>
+</div>
+
+<div class="gallery">
+    <img id="myImg3" src="E:\My Pictures\Castlevania Dracula.jpg" alt="CD" >
+  <div class="desc">Castlevania - Dracula</div>
+</div>
+
+<div class="gallery">
+    <img id="myImg4" src="E:\My Pictures\Berserk-Gutz gone Wild.jpg" alt="BGW" >
+  <div class="desc">Berserk</div>
+</div>
+
+<div class="gallery">
+    <img id="myImg5" src="E:\My Pictures\Berserk-Gutz Charging.jpg" alt="BGC" >
+  <div class="desc">Berserk</div>
+</div>
+
+<div class="gallery">
+    <img id="myImg6" src="E:\My Pictures\Hellsing Alucard.jpg" alt="HA" >
+  <div class="desc">Hellsing - Alucard</div>
+</div>
+
+<div class="gallery">
+    <img id="myImg7" src="E:\My Pictures\Hellsing.jpg" alt="H" "width="512px; height="300px;">
+  <div class="desc">Hellsing Logo</div>
+</div>
+
+                                               <!-- The Java Script Part -->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">Close</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg1');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg2');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg3');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg4');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg5');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg6');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('myImg7');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+                                                        <!-- Email Links -->
+
+
+<ul class="E-mail">
+  <li class = "Mail-list"><a data-email="mailto:drakefire93@gmail.com" 
+href="mailto:drakefire93@gmail.com">E-mail</a></li> 
+  <li class = "Mail-list"><a data-email="https://mail.google.com/mail/u/0/#inbox" 
+href="https://mail.google.com/mail/u/0/#inbox">E-mail</a></li>
+</ul>
+
+</body>
+</html>

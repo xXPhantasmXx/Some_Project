@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8"/>
+
+<script>                                        /*jQuery*/
+$(document).ready(function(){
+  $("#kado").click(function(){
+   $(this).hide("slow");
+   });
+  $("ul").dblclick(function(){
+   $("#kado").show("slow");
+   });
+});
+</script>
+ 
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    position:fixed;
+    width:98.6%;
+    border-radius:10px;
+}
+
+li {
+    float: left;
+    border-right:1px solid white;
+}
+
+li a.active {
+    background-color: rgb(60,60,60);
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: rgb(255,120,0);
+    color: white;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgb(255,120,0);
+    color: white;
+}
+                                                           /*Menu*/
+
+#kado{
+  padding:auto;
+  position:relative;
+  top:60px;
+  left:45%;
+  width:100px;
+  height:100px;
+  background-color:red;
+  border-radius:10px;
+  -webkit-animation-name:kado1;
+  -webkit-animation-duration:6s;
+  -webkit-animation-iteration-count:infinite;
+  animation-name:kado1;
+  animation-duration:6s;
+  animation-iteration-count:infinite;
+}
+
+@-webkit-keyframes kado1{
+  0%   {background-color:red;}
+  25%  {background-color:yellow;}
+  50%  {background-color:green;}
+  75%  {background-color:blue;}
+  100% {background-color:red;}
+}
+@keyframes kado1{
+  0%   {background-color:red;}
+  25%  {background-color:yellow;}
+  50%  {background-color:green;}
+  75%  {background-color:blue;}
+  100% {background-color:red;}
+}
+                                                         /* Animation */
+input[type=icon] {
+    width: 100%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url("searchicon.png");
+    background-position: 5px 5px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius:5px;
+    outline:none;
+}
+
+input[type=text]:focus {
+  background-color:lightblue;
+}
+
+input[type=say] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius:5px;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+input[type=say]:focus {
+    border: 3px solid #555;
+}
+
+textarea{
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+                                                      /*  Text Feilds  */
+select {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(250,250,250);
+}
+                                             /*Select Country Dropdown button*/
+
+body {
+    counter-reset: section;
+}
+
+h1::before {
+    counter-increment: section;
+    content: "Chapter " counter(section) ": ";
+}
+
+h2::before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) " "
+} 
+                                                         /*Counter*/
+
+div.gallery {
+    display: table;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    float: left;
+    width: 220px;
+    box-shadow:4px 4px 5px gray;
+    border-radius:8px;
+    overflow:hidden;
+}
+
+div.gallery:hover {
+    border: 1px solid blue;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+                                                           /*  Galery  */
+.center{
+  text-align:center;
+}
+
+.space{
+  margin-top:50px;
+}
+
+
+
+</style>
+</head>
+<body>
+<ul>
+  <li><a href="Test Page 1.html">Page 1</a></li>
+  <li><a href="Test Page 2.html">Page 2</a></li>
+  <li><a href="Test Page 3.html">Page 3</a></li>
+  <li><a href="Test Page 3 + Dropdown.html">Page 3+</a></li>
+  <li><a href="Test Page 4.html">Page 4</a></li>
+  <li><a class="active" href="Test Page 5.html">Page 5</a></li>
+  <li><a href="Test Page 5 + JavaScript.html">Page 5+</a></li>
+</ul>
+
+<br/>
+
+<div id="kado"></div>
+
+<br/>
+
+<div class="space">
+<form>
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="fname">
+  <label for="lname">Last Name</label>
+  <input type="say" id="lname" name="lname">
+</form>
+<div>
+
+<form>
+  <input type="icon" name="search" placeholder="Search...">
+</form>
+
+<br/>
+
+<form>
+  <textarea placeholder="Text..."></textarea>
+</form>
+
+<br/>
+
+<form>
+  <select id="country" name="country">
+    <option value="au">Australia</option>
+    <option value="ca">Canada</option>
+    <option value="usa">USA</option>
+  </select>
+</form>
+
+<br/>
+
+<div class="center">
+<h1>Beginning Of The End</h1>
+  <h2>On Coalision Course</h2>
+<h1>The Terror</h1>
+  <h2>Three Weeks Reamining</h2>
+  <h2>Unavoidable Destiny</h2>
+<h1>Pain</h1>
+  <h2>The Ones We lost</h2>
+  <h2>The Sadness</h2>
+<h1>Our Only Hope</h1>
+  <h2>Survive</h2>
+  <h2>Complete The Time Machine</h2>
+<h1>Trough Time & Space</h1>
+  <h2>Dimension Device ?</h2>
+<h1>Different Dimensions</h1>
+  <h2>The Paralel Dimension</h2>
+  <h2>The Future</h2>
+<h1>The Final Frontier</h1>
+  <h2>The Realms Unknown</h2>
+  <h2>The Realm Of God</h2>
+<h1>Salvation</h1>
+  <h2>The End</h2>
+
+<br/>
+
+<div class="responsive">
+<div class="gallery">
+  <a target="_blank" href="E:\My Pictures\Metal Gear Rising - Jack The Ripper.jpg">
+    <img  src="E:\My Pictures\Metal Gear Rising - Jack The Ripper.jpg" alt="MGR-JTR" >
+  </a>
+  <div class="desc">Metal Gear Rising</div>
+</div>
+</div>
+
+<div class="responsive">
+<div class="gallery">
+  <a target="_blank" href="E:\My Pictures\Metal Gear Rising - Raiden.jpg">
+    <img  src="E:\My Pictures\Metal Gear Rising - Raiden.jpg" alt="MGR-R" >
+  </a>
+  <div class="desc">Metal Gear Rising</div>
+</div>
+</div>
+
+<div class="responsive">
+<div class="gallery">
+  <a target="_blank" href="E:\My Pictures\Castlevania Alucard.jpg">
+    <img  src="E:\My Pictures\Castlevania Alucard.jpg" alt="CA" >
+  </a>
+  <div class="desc">Castlevania - Alucard</div>
+</div>
+</div>
+
+<div class="responsive">
+<div class="gallery">
+  <a target="_blank" href="E:\My Pictures\Castlevania Dracula.jpg">
+    <img src="E:\My Pictures\Castlevania Dracula.jpg" alt="CD" >
+  </a>
+  <div class="desc">Castlevania - Dracula</div>
+</div>
+</div>
+
+<div class="responsive">
+<div class="gallery">
+  <a target="_blank" href="E:\My Pictures\Berserk-Gutz gone Wild.jpg">
+    <img src="E:\My Pictures\Berserk-Gutz gone Wild.jpg" alt="CD" >
+  </a>
+  <div class="desc">Berserk</div>
+</div>
+</div>
+
+<div class="responsive">
+<div class="gallery">
+  <a target="_blank" href="E:\My Pictures\Berserk-Gutz Charging.jpg">
+    <img src="E:\My Pictures\Berserk-Gutz Charging.jpg" alt="CD" width="600" height="400">
+  </a>
+  <div class="desc">Berserk</div>
+</div>
+</div>
+
+<div class="responsive">
+<div class="gallery">
+  <a target="_blank" href="E:\My Pictures\Hellsing Alucard.jpg">
+    <img src="E:\My Pictures\Hellsing Alucard.jpg" alt="CD" width="600" height="400">
+  </a>
+  <div class="desc">Hellsing - Alucard</div>
+</div>
+</div>
+
+<div class="responsive">
+<div class="gallery">
+  <a target="_blank" href="E:\My Pictures\Hellsing.jpg">
+    <img src="E:\My Pictures\Hellsing.jpg" alt="CD" width="600" height="400">
+  </a>
+  <div class="desc">Hellsing Logo</div>
+</div>
+</div>
+
+<p style="text-align:center">
+<a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_images_filters">Filters</a>
+</p>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+<style>
+body{
+    font-family:"Times New Roman", Times, serif;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    width: 98.6%;
+    border-radius: 10px;
+    font-size: 16px;
+    z-index: 30;
+}
+
+li {
+    float: left;
+    border-right:1px solid white;
+}
+
+li a.active {
+    background-color: rgb(60,60,60);
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: rgb(255,120,0);
+    color: white;
+    text-decoration: none;
+}
+
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgb(255,120,0);
+    color: white;
+    text-decoration: none;
+}
+                                                    /* Menu */
+div.cities {
+    background-color: black;
+    color: white;
+    margin: 20px 0 20px 0;
+    padding: 20px;
+}
+
+.contain{
+  position:relative;
+}
+
+.vidctr{
+  position:absolute;
+  top:20%;
+  left:25%;
+  transform:tranlsate(-25%, -25%);
+}
+
+.audctr{
+  position:absolute;
+  left:38%;
+  margin-top:39%;
+}
+
+.bl{
+  position:absolute;
+  margin-top:40%;
+  left:30%px;
+}
+
+</style>
+</head>
+<body>
+
+<ul>
+  <li><a href="Test Page 1.html">Page 1</a></li>
+  <li><a href="Test Page 2.html">Page 2</a></li>
+  <li><a class="active" href="Test Page 3.html">Page 3</a></li>
+  <li><a href="Test Page 3 + Dropdown.html">Page 3+</a></li>
+  <li><a href="Test Page 4.html">Page 4</a></li>
+  <li><a href="Test Page 5.html">Page 5</a></li>
+  <li><a href="Test Page 5 + JavaScript.html">Page 5+</a></li>
+</ul>
+
+<br/>
+<div class="news">
+<div style="background-color:black;color:white;padding:20px;margin-top:50px" class="cities">
+  <h2>London</h2>
+	<p>London is the capital city of England.<br> It is the most populous city in the United Kingdom,
+ 	with a metropolitan area of over 13 million inhabitants.</p>
+	<p>Standing on the River Thames, London has been a major settlement for two millennia,<br> its history 
+	going back to its founding by the Romans, who named it Londinium.</p>
+</div> 
+
+<div style="background-color:black;color:white;padding:20px;"class="cities">
+  <h2>Paris</h2>
+	<p>Paris is the capital and most populous city of France.</p>
+	<p>Situated on the Seine River, it is at the heart of the Île-de-France region,
+	<br> also known as the région parisienne.</p>
+	<p>Within its metropolitan area is one of the largest population centers in Europe,
+	<br> with over 12 million inhabitants.</p>
+</div>
+
+<div style="background-color:black;color:white;padding:20px;"class="cities">
+  <h2>Tokyo</h2>
+	<p>Tokyo is the capital of Japan,
+	<br> the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+	<p>It is the seat of the Japanese government and the Imperial Palace, and the home of the Japanese Imperial Family.</p>
+	<p>The Tokyo prefecture is part of the world's most populous metropolitan area
+	<br> with 38 million people and the world's largest urban economy, also home to ghouls ^^.</p>
+</div>
+<p id="yo"></p>
+
+<script>
+document.getElementById("yo").innerHTML = "Help I'm trapped inside my computer!!!";
+</script>
+&forall;&part;&exist;&empty;&nabla;&isin;&notin;&ni;&prod;&sum;
+
+<br/>
+
+	<a href="https://www.w3schools.com/charsets/ref_utf_math.asp"target="_blank">Symbols</a>|
+	<a href="https://www.w3schools.com/charsets/ref_utf_greek.asp"target"_blank">Greek Letters</a>|
+	<a href="https://www.w3schools.com/charsets/ref_utf_currency.asp"target="_blank">Currency Symbols</a>|
+	<a href="https://www.w3schools.com/charsets/ref_utf_arrows.asp"target="_blank">Arrows</a>|
+	<a href="https://www.w3schools.com/charsets/ref_utf_symbols.asp"target="_blank">All Symbols</a>|
+	<a href="https://www.w3schools.com/tags/ref_urlencode.asp"target="_blank">URL Encoding</a>|
+
+<br/>
+
+<div class="contain">
+<div class="vidctr">
+<video width="680" height="420" controls>
+  <source src="E:\HTML\Bleach Episode 309.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+</div>
+</div>
+
+<br/>
+
+<div class="contain">
+<div class="audctr">
+<p style="text-align:center;">Bleach (SID) - Ranbu No Melody</p>
+<audio controls>
+  <p>Bleach (SID) - Ranbu No Melody</p>
+  <source src="Bleach (SID) - Ranbu No Melody.mp3" type="audio/mpeg"/>
+Your browser does not support the audio element.
+</audio>
+</div>
+</div>
+
+<br/>
+
+<div class="contain">
+<div class="bl">
+<i class="material-icons">cloud</i>
+  <i class="material-icons">favorite</i>
+  <i class="material-icons">attachment</i>
+  <i class="material-icons">computer</i>
+  <i class="material-icons">traffic</i>
+
+  <i class="glyphicon glyphicon-cloud"></i>
+  <i class="glyphicon glyphicon-remove"></i>
+  <i class="glyphicon glyphicon-user"></i>
+  <i class="glyphicon glyphicon-envelope"></i>
+  <i class="glyphicon glyphicon-thumbs-up"></i>
+
+  <i class="fa fa-cloud"></i>
+  <i class="fa fa-heart"></i>
+  <i class="fa fa-car"></i>
+  <i class="fa fa-file"></i>
+  <i class="fa fa-bars"></i>
+</div>
+</div>
+
+</body>
+</html>

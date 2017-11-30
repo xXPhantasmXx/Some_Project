@@ -1,0 +1,126 @@
+
+body {
+  background-color:rgb(0,180,255);
+}
+
+
+div.transperant {
+  border: 1px solid blue;
+  border-radius:10px;
+  padding:20px;
+  margin:150px;
+  background-color:rgba(255,255,255,0.6);
+  filter=alpha(opacity=60);
+}
+
+div.transbox p{
+  text-align:center;
+  font-weight:bold;
+  margin:150px;
+}
+
+div.transbox{
+  border:1px solid blue;
+  padding:20px;
+  margin:150px;
+  background-color:rgba(255,255,255,0.6);
+  border-radius:10px;
+  filter: alpha(opacity=60);
+}
+
+div.transbox h1{
+  text-align:center;
+  border-radius:10px;
+  font-weight:bold;
+  margin:10px;
+}
+
+#p01 {
+  color:rgb(0,0,255);
+  text-align:center;
+  font-size:150%;
+}
+
+a:link {
+  color: white; 
+  background-color: transparent; 
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color:rgb(255,255,255);
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: green;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+div.firstp {
+  border:1px solid blue;
+  background-color:rgb(0,150,200);
+  border-radius:10px;
+  padding: 20px;
+  margin: 150px;
+}
+.firsth::before{
+  content:"";
+  clear:both;
+}
+div.firsth{
+  content:"";
+  border:1px solid blue;
+  background-color:rgb(0,150,200);
+  border-radius:10px;
+  padding:20px;
+  margin:150px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0,0,0);
+    position:fixed;
+    width:98.6%;
+    border-radius:10px;
+}
+
+li {
+    float: left;
+    border-right:1px solid white;
+}
+
+li a.active {
+    background-color: rgb(60,60,60);
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: rgb(255,120,0);
+    color: white;
+    text-decoration: none;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgb(255,120,0);
+    color: white;
+    text-decoration: none;
+}
